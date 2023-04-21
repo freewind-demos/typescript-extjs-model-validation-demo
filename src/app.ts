@@ -5,17 +5,17 @@ Ext.define('Student', {
         {name: 'Id', type: 'int'},
         'firstName',
         'lastName'
-    ]
+    ],
+    validators: {
+        firstName: 'presence',
+        lastName: {type: 'length', min: 2}
+    }
 });
 
 Ext.onReady(() => {
-    const student = Ext.create('Student', {firstName: 'Freewind', lastName: 'Lee'});
-    console.log("### student", student)
-    new Ext.Panel({
-        renderTo: 'main',
-        height: 100,
-        width: 200,
-        title: 'Hello world',
-        html: `Hello ${student.get('firstName')}.${student.get('lastName')}`
-    })
+    const student = Ext.create('Student', {firstName: 'Freewind', lastName: 'L'});
+    console.log({student, valid: student.isValid()});
+
+    student.set('lastName', 'Lee');
+    console.log({student, valid: student.isValid()});
 });
