@@ -1,7 +1,7 @@
-TypeScript ExtJS Demo
+TypeScript ExtJS Model Demo
 ====================
 
-'extjs-typings-6.2.0' 来自：https://github.com/ExtTS/definitions/tree/master/6.2.0-classic-all-packages-no-jsdocs
+代码来自 https://www.extjs-tutorial.com/extjs/extjs-model
 
 ```
 npm install
